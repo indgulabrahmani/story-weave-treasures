@@ -12,6 +12,7 @@ import poetryCollectionImg from "@/assets/poetry-collection.jpg";
 import vintageTeacupsImg from "@/assets/vintage-teacups.jpg";
 import vintageCameraImg from "@/assets/vintage-camera.jpg";
 import babyBlanketImg from "@/assets/baby-blanket.jpg";
+import heroDarkBgImg from "@/assets/hero-dark-bg.jpg";
 import { 
   Heart, 
   Search, 
@@ -342,7 +343,7 @@ const Index = () => {
                   variant="ghost" 
                   size="sm" 
                   onClick={() => setIsSignInOpen(true)}
-                  className="bg-gradient-to-r from-primary/10 to-accent-warm/10 hover:from-primary/20 hover:to-accent-warm/20 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                  className="bg-gradient-to-r from-gray-800 to-gray-900 hover:from-gray-700 hover:to-gray-800 text-white border border-gray-600 hover:border-gray-500 shadow-lg hover:shadow-xl transition-all duration-300"
                 >
                   Sign In
                 </Button>
@@ -356,25 +357,29 @@ const Index = () => {
       </header>
 
 {/* Hero Section */}
-      <section className="py-32 bg-gradient-to-br from-cream via-warm-50 to-sage-50 relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/10 via-transparent to-primary/10"></div>
-        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)]"></div>
+      <section className="py-32 relative overflow-hidden">
+        <div 
+          className="absolute inset-0 bg-cover bg-center bg-no-repeat"
+          style={{ backgroundImage: `url(${heroDarkBgImg})` }}
+        ></div>
+        <div className="absolute inset-0 bg-black/60"></div>
+        <div className="absolute inset-0 bg-gradient-to-b from-black/40 via-transparent to-black/60"></div>
         <div className="absolute inset-0 opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 text-center relative">
-          <Badge variant="secondary" className="mb-8 px-6 py-3 text-base shadow-lg">
+          <Badge variant="secondary" className="mb-8 px-6 py-3 text-base shadow-lg bg-black/30 border-gold/30 text-white backdrop-blur-sm">
             <Heart className="w-5 h-5 mr-3 text-accent-warm" />
             Where Stories Find New Homes Since 2024
           </Badge>
-          <h1 className="text-6xl md:text-8xl font-serif text-primary mb-8 leading-tight">
+          <h1 className="text-6xl md:text-8xl font-serif text-white mb-8 leading-tight drop-shadow-2xl">
             Every Item Has a{' '}
             <span className="block relative">
-              <span className="bg-gradient-to-r from-accent-warm via-primary to-accent-warm bg-clip-text text-transparent animate-pulse">
+              <span className="bg-gradient-to-r from-accent-warm via-yellow-400 to-accent-warm bg-clip-text text-transparent animate-pulse drop-shadow-lg">
                 Beautiful Story
               </span>
-              <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/20 to-primary/20 blur-xl -z-10 animate-pulse"></div>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/30 to-yellow-400/30 blur-xl -z-10 animate-pulse"></div>
             </span>
           </h1>
-          <p className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
+          <p className="text-2xl md:text-3xl text-gray-200 mb-12 max-w-4xl mx-auto leading-relaxed drop-shadow-lg">
             Transform forgotten treasures into cherished finds. Connect hearts through stories, 
             not just shopping. Because every pre-loved item deserves a new chapter.
           </p>
@@ -382,7 +387,7 @@ const Index = () => {
           <div className="flex flex-col sm:flex-row gap-6 justify-center mb-20">
             <Button 
               size="lg" 
-              className="text-xl px-12 py-6 bg-gradient-warm hover:shadow-elegant transform hover:scale-105 transition-all duration-300" 
+              className="text-xl px-12 py-6 bg-gradient-to-r from-accent-warm to-yellow-500 hover:from-yellow-500 hover:to-accent-warm text-black font-bold shadow-2xl hover:shadow-accent-warm/50 transform hover:scale-105 transition-all duration-300" 
               onClick={() => scrollToSection('featured-items')}
             >
               <Search className="w-6 h-6 mr-3" />
@@ -391,7 +396,7 @@ const Index = () => {
             <Button 
               variant="outline" 
               size="lg" 
-              className="text-xl px-12 py-6 border-2 border-primary hover:bg-primary/5 transform hover:scale-105 transition-all duration-300"
+              className="text-xl px-12 py-6 border-2 border-white/70 text-white hover:bg-white/10 hover:border-white backdrop-blur-sm shadow-xl transform hover:scale-105 transition-all duration-300"
               onClick={() => scrollToSection('sell-item')}
             >
               <Heart className="w-6 h-6 mr-3" />
@@ -401,23 +406,23 @@ const Index = () => {
 
           {/* Community Stats */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-4xl mx-auto">
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">15,420</div>
-              <div className="text-muted-foreground flex items-center justify-center gap-2">
+            <div className="text-center backdrop-blur-sm bg-black/20 rounded-lg p-6 border border-white/20">
+              <div className="text-4xl font-bold text-accent-warm mb-2 drop-shadow-lg">15,420</div>
+              <div className="text-gray-300 flex items-center justify-center gap-2">
                 <Heart className="w-4 h-4" />
                 Stories Shared
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-accent-warm mb-2">2,847</div>
-              <div className="text-muted-foreground flex items-center justify-center gap-2">
+            <div className="text-center backdrop-blur-sm bg-black/20 rounded-lg p-6 border border-white/20">
+              <div className="text-4xl font-bold text-yellow-400 mb-2 drop-shadow-lg">2,847</div>
+              <div className="text-gray-300 flex items-center justify-center gap-2">
                 <Recycle className="w-4 h-4" />
                 Items Saved from Landfills
               </div>
             </div>
-            <div className="text-center">
-              <div className="text-4xl font-bold text-primary mb-2">8,392</div>
-              <div className="text-muted-foreground flex items-center justify-center gap-2">
+            <div className="text-center backdrop-blur-sm bg-black/20 rounded-lg p-6 border border-white/20">
+              <div className="text-4xl font-bold text-accent-warm mb-2 drop-shadow-lg">8,392</div>
+              <div className="text-gray-300 flex items-center justify-center gap-2">
                 <Users className="w-4 h-4" />
                 Community Members
               </div>
