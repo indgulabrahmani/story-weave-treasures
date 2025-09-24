@@ -57,11 +57,19 @@ export default {
           border: "hsl(var(--sidebar-border))",
           ring: "hsl(var(--sidebar-ring))",
         },
+        "accent-warm": "hsl(var(--accent-warm))",
       },
       borderRadius: {
         lg: "var(--radius)",
         md: "calc(var(--radius) - 2px)",
         sm: "calc(var(--radius) - 4px)",
+      },
+      backgroundImage: {
+        "gradient-warm": "var(--gradient-warm)",
+        "gradient-subtle": "var(--gradient-subtle)",
+      },
+      boxShadow: {
+        "elegant": "var(--shadow-elegant)",
       },
       keyframes: {
         "accordion-down": {
