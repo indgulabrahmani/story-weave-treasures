@@ -338,7 +338,12 @@ const Index = () => {
               </DropdownMenu>
             ) : (
               <div className="flex gap-2">
-                <Button variant="ghost" size="sm" onClick={() => setIsSignInOpen(true)}>
+                <Button 
+                  variant="ghost" 
+                  size="sm" 
+                  onClick={() => setIsSignInOpen(true)}
+                  className="bg-gradient-to-r from-primary/10 to-accent-warm/10 hover:from-primary/20 hover:to-accent-warm/20 border border-primary/20 hover:border-primary/40 transition-all duration-300"
+                >
                   Sign In
                 </Button>
                 <Button size="sm" onClick={() => setIsSignUpOpen(true)}>
@@ -351,7 +356,9 @@ const Index = () => {
       </header>
 
 {/* Hero Section */}
-      <section className="py-32 bg-gradient-to-b from-cream via-warm-50 to-sage-50 relative overflow-hidden">
+      <section className="py-32 bg-gradient-to-br from-cream via-warm-50 to-sage-50 relative overflow-hidden">
+        <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/10 via-transparent to-primary/10"></div>
+        <div className="absolute inset-0 bg-[radial-gradient(circle_at_center,rgba(212,175,55,0.1)_0%,transparent_70%)]"></div>
         <div className="absolute inset-0 opacity-30"></div>
         <div className="max-w-7xl mx-auto px-4 text-center relative">
           <Badge variant="secondary" className="mb-8 px-6 py-3 text-base shadow-lg">
@@ -360,8 +367,11 @@ const Index = () => {
           </Badge>
           <h1 className="text-6xl md:text-8xl font-serif text-primary mb-8 leading-tight">
             Every Item Has a{' '}
-            <span className="block text-accent-warm bg-gradient-to-r from-accent-warm to-primary bg-clip-text text-transparent animate-pulse">
-              Beautiful Story
+            <span className="block relative">
+              <span className="bg-gradient-to-r from-accent-warm via-primary to-accent-warm bg-clip-text text-transparent animate-pulse">
+                Beautiful Story
+              </span>
+              <div className="absolute inset-0 bg-gradient-to-r from-accent-warm/20 to-primary/20 blur-xl -z-10 animate-pulse"></div>
             </span>
           </h1>
           <p className="text-2xl md:text-3xl text-muted-foreground mb-12 max-w-4xl mx-auto leading-relaxed">
