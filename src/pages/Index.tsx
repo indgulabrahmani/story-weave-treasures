@@ -8,6 +8,10 @@ import { Label } from "@/components/ui/label";
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
 import { SellItemSection } from "@/components/SellItemSection";
+import poetryCollectionImg from "@/assets/poetry-collection.jpg";
+import vintageTeacupsImg from "@/assets/vintage-teacups.jpg";
+import vintageCameraImg from "@/assets/vintage-camera.jpg";
+import babyBlanketImg from "@/assets/baby-blanket.jpg";
 import { 
   Heart, 
   Search, 
@@ -63,7 +67,7 @@ const featuredItems: Item[] = [
     location: "Portland, OR",
     listedDate: "2 days ago",
     isFavorite: false,
-    image: "/placeholder.svg",
+    image: poetryCollectionImg,
     views: 127
   },
   {
@@ -80,7 +84,7 @@ const featuredItems: Item[] = [
     location: "Charleston, SC",
     listedDate: "5 days ago",
     isFavorite: false,
-    image: "/placeholder.svg",
+    image: vintageTeacupsImg,
     views: 89
   },
   {
@@ -97,7 +101,7 @@ const featuredItems: Item[] = [
     location: "Austin, TX", 
     listedDate: "1 week ago",
     isFavorite: false,
-    image: "/placeholder.svg",
+    image: vintageCameraImg,
     views: 203
   },
   {
@@ -114,7 +118,7 @@ const featuredItems: Item[] = [
     location: "Denver, CO",
     listedDate: "3 days ago", 
     isFavorite: false,
-    image: "/placeholder.svg",
+    image: babyBlanketImg,
     views: 156
   }
 ];
